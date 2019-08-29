@@ -1,46 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>Full responsive website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-  <!-- Bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-
-  <meta name="description" content="The responsive">
-  <meta name="author" content="Bianca de Paula">
-</head>
-
-<body>
-
-
-<nav class="navbar navbar-toggleable-md navbar-light">
-  <div class="container">
-     <a class="navbar-brand" href="index.html"><img class="logo" src="../img/yourlogo.png"></a>
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav ml-auto">
-        <a class="nav-link active" href="index.html">Home</a>
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link" href="contact.html">Contact</a>
-      </div>
-    </div>
-  </div>
-</nav>
- <!---end nav-->
+{% extends "base.html" %}
+{% load static %}
+{% block slide %}
 <div class="container-fluid">
-  <img src="../img/about.png" class="banner_about">
+  <img src="{% static 'img/about.png' %}" class="banner_about">
   
 </div>
+{% endblock slide %}
+
+{% block content %}
 <div class="container text-center"> <!---begin content-->
   <h2>Who I am?</h2>
   <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -79,29 +46,5 @@
   </div>
 </div> 
 
-<footer class="container-fluid text-center">
-  <div class="row">
-    <div class="col-sm-4">
-      <h4>Contact us</h4>
-      <br>
-      <p>Our adress and contact info here</p>
-    </div> 
 
-    <div class="col-sm-4">
-      <h4>Connect with us</h4>
-      <a href="#" class="fa fa-facebook fa-2x"></a>
-      <a href="#" class="fa fa-twitter fa-2x"></a>
-      <a href="#" class="fa fa-pinterest fa-2x"></a>
-      <a href="#" class="fa fa-linkedin fa-2x"></a>
-    </div> 
-
-    <div class="col-sm-4">
-     <img src="../img/message.png">
-    </div> 
-  </div>
-</footer>
-
-
-
-</body>
-</html>
+{% endblock content %}
