@@ -1,0 +1,212 @@
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 2px solid lightgrey;
+  color: #d0d3d4;
+}
+
+.carousel-caption {
+  top: 50%;
+}
+
+.carousel-caption h5 {
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+}
+
+.btn:hover {
+  background-color: #d0d3d4;
+}
+
+.img-flat {
+  width: 250px;
+  height: auto;
+  padding-top: 20px;
+}
+
+.img-flat-text {
+  width: 250px;
+  height: auto;
+}
+.container {
+  padding: 30px 0;
+}
+
+.text_image {
+  width: 490px;
+}
+
+footer {
+  width: 100%;
+  background-color: #f0f3f4;
+  padding: 45px 0;
+}
+
+footer img {
+  width: 20%;
+}
+
+.fa {
+  padding: 2%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+/* Over pagina */
+.img-profile {
+  width: 400px;
+}
+
+.progress {
+  width: 400px;
+  margin-bottom: 10px;
+}
+.skills {
+  margin-bottom: 10px;
+}
+
+.banner_about {
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Contact pagina */
+
+hr {
+  width: 50%;
+}
+
+form {
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 425px) {
+  #navbarCollapse {
+    text-align: center;
+  }
+
+  .carousel-inner,
+  .carousel-item {
+    max-height: 250px;
+  }
+
+  h3,
+  h4 {
+    text-align: center;
+  }
+
+  .img-flat {
+    width: 200px;
+  }
+
+  .img-flat-text {
+    margin: 0 auto;
+    width: 250px;
+    padding: 30px;
+  }
+
+  .hidden_content {
+    margin: 0 auto;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .skills {
+    margin-top: 0 auto;
+    padding-top: 25px;
+  }
+
+  .progress {
+    margin: 0 auto;
+  }
+
+  .img-profile {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .red {
+    color: red;
+  }
+  .form-area {
+    background-color: #fafafa;
+    padding: 10px 40px 60px;
+    margin: 10px 0px 60px;
+    border: 1px solid GREY;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #navbarCollapse {
+    text-align: center;
+  }
+  .text_image {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .img-flat-text {
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .progress {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+  .carousel-caption {
+    display: none;
+  }
+
+  .carousel-inner,
+  .carousel-item {
+    height: 500px;
+  }
+
+  .text_image {
+    margin-top: 40px;
+  }
+
+  .img-flat-text {
+    width: 180px;
+  }
+
+  .img-flat {
+    width: 180px;
+  }
+
+  .img-profile {
+    width: 300px;
+  }
+}
