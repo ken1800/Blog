@@ -20,3 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('portfolio.urls')),
 ]
+admin.site.site_header = 'Blog Admin Panel'
+admin.site.index_title = 'Blog Admin'
+admin.site.site_title = 'Blog Control Panel'
