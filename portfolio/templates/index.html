@@ -73,25 +73,27 @@
   </div>
 </div>
 {% endfor %}
+
+{% for texts in Text  %}
 <div class="container"> <!---begin third content-->
   <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <h4>Text here</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <h4>{{texts.text1_h}}</h4>
+      <p>{{ texts.text1}}</p>
   </div>
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
       <img class="img-flat-text" src="{% static 'img/bulb.png' %}">
     </div>
    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <h4>Text here</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h4>{{texts.text2_h}}</h4>
+      <p>{{ texts.text2 }}</p>
   </div>
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
       <img class="img-flat-text" src="{% static 'img/pencil.png' %}">
     </div>
   </div>
 </div>
-
+{% endfor %}
 <div class="container"> <!---begin collapse content-->
   <div class="row">
       <h4 class="hidden_content"><a href="#Hidden" data-toggle="collapse">Hidden text in here</a></h4>
