@@ -16,5 +16,12 @@ class TextHome(models.Model):
     
     def __str__(self):
         return self.text1+"-"+str(self.text1_h)
+    
+class About(models.Model):
+    Title = models.CharField(max_length=100)
+    text = models.TextField(max_length=600)
+    
+    def __str__(self):
+        return self.text+"-"+str(self.Title)
 
 # Create your models here.
