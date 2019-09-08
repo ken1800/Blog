@@ -7,36 +7,48 @@
 <div class="container text-center">
   <!---begin content-->
   <h2>Get in contact with me</h2>
-  <hr>
-  <p>Fill the form below and learn more.</p>
+  {% for contact in contact %}
+
+<div class="container text-center"> <!---begin content-->
+  <h2>{{ contact.name}}</h2>
+      <p>"{{ contact.text}}""</p>
+      <p>{{ contact.email}}</p>
+      <p>{{ contact.number}}</p>
 </div>
+  
+{% endfor %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <img class="img-profile" src="{% static 'img/kenny.JPG' %}">
+    </div>
 
-<div class="container justify-content-center d-flex">
-  <div class="col-sm-6">
-    <div class="form-area">
-      <form role="form">
-        <br style="clear:both">
-        <div class="form-group">
-          <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+      <div class="col-md-6 col-sm-12">
+        <h4 class="skills">Skills</h4>
+        <p>Python</p>
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div>
+        <p>Django</p>
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 89%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+          </div>
         </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+        <p>JavaScript</p>
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+          </div>
         </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-        </div>
-        <div class="form-group">
-          <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-          <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>
-        </div>
-
-        <button type="button" id="submit" name="submit" class="btn btn-primary ">Submit Form</button>
-      </form>
+        <p>Html and Css</p>
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+          </div>
+    </div>
     </div>
   </div>
+</div> 
+
 </div>
 {% endblock content %}
  

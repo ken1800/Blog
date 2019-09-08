@@ -96,12 +96,21 @@
 {% endfor %}
 <div class="container"> <!---begin collapse content-->
   <div class="row">
-      <h4 class="hidden_content"><a href="#Hidden" data-toggle="collapse">Hidden text in here</a></h4>
+      <h4 class="hidden_content"><a href="#Hidden" data-toggle="collapse">My Projects</a></h4>
       <div id="Hidden" class="collapse">
-        <h4>Titel</h4>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        
+        {% for work in work %}
+        <div class="container"> <!---begin third content-->
+        <div class="row"> 
+        <div class="col-md-6">
+             <h4> <a href="{{ work.link }}" role="button">{{ work.title }}</a> </h4>
+              <p>"{{work.text}}"</p>
+        </div>
+       
+        </div>
+        </div>
       </div>
+      {% endfor %}
   </div>
 </div>
 
