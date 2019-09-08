@@ -23,5 +23,12 @@ class About(models.Model):
     
     def __str__(self):
         return self.text+"-"+str(self.Title)
+class Contact(models.Model):
+    name = models.CharField(max_length=200)
+    email =models.EmailField(max_length=200)
+    number = models.IntegerField(max_length=13)
+    subject = models.CharField(max_length=100)
+    text = models.TextField(max_length=600)
+    
 
 # Create your models here.
