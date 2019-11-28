@@ -20,6 +20,8 @@ python manage.py runserver
 ## Author
 
 ken1800 
+## Screenshot
+![blog3](https://user-images.githubusercontent.com/50213124/69785284-aaacdf00-1185-11ea-9670-9839bd26071e.png)
 
 ## License
 
