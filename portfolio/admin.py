@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Home,TextHome,About,Contact,Work
+from .models import Home,TextHome,About,Contact,Work,UserProfile,Note
 
 class HomeAdmin(admin.ModelAdmin):
     list_display = ('topic',)
@@ -11,5 +11,7 @@ admin.site.register(TextHome)
 admin.site.register(About)
 admin.site.register(Contact)
 admin.site.register(Work)
+admin.site.register(UserProfile)
+admin.site.register(Note)
     
     

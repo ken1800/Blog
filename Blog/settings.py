@@ -44,10 +44,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'portfolio.apps.PortfolioConfig'
+    'portfolio.apps.PortfolioConfig',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'corsheaders',
+    'channels',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -58,6 +64,25 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Blog.urls'
+
+
+CORS_ORIGIN_WHITELIST = (
+    
+    'https://localhost:3000',
+    
+)
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_REGEX_WHITELIST = [
+    'http://localhost:3000',
+]
+    
+    
+
+
+
 
 TEMPLATES = [
     {
@@ -131,9 +156,26 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+AUTH_USER_MODEL ='portfolio.UserProfile'
+ASGI_APPLICATION = "Blog.routing.application"
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
  
 ]
 MEDIA_URL ='/media/'
 STATIC_ROOT =os.path.join(BASE_DIR, "media")
+
+
+# ASGI_APPLICATION = "routing.application"
+
+
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}

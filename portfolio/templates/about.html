@@ -15,8 +15,9 @@
 {% for about in about  %}
 
 <div class="container text-center"> <!---begin content-->
-  <h2>{{ about.Title}}</h2>
+  <h2>{{ about.Title}} </h2>
       <p>"{{ about.text}}""</p>
+      <p> (by {{about.user_profile.name}})</p>
 </div>
   
 {% endfor %}
